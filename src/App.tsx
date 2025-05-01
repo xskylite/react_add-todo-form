@@ -21,7 +21,7 @@ export const App = () => {
   }
 
   function getNewTodoId(): TodoId {
-    return Math.max(...todos.map(todo => todo.id)) + 1;
+    return Math.max(...todos.map(todo => todo.id)) + 1 || 1;
   }
 
   function handleChangeTitle(event: React.FormEvent<HTMLInputElement>) {
